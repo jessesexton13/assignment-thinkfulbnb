@@ -31,14 +31,14 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 400px;
 }
 
 /* ---  Groups & Items --- */
 
 .group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .item {
@@ -48,6 +48,8 @@ main img {
 
 .item-double {
   flex: 2;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* -------  Navigation ------- */
@@ -62,6 +64,14 @@ header {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+header nav ul {
+  display: flex;
 }
 
 header nav ul li {
@@ -87,6 +97,13 @@ form {
 
 form label {
   font-weight: bold;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 form select,
@@ -117,3 +134,45 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480 px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .logo {
+    margin: 14 px 0 14 px 20 px;
+    padding-top: 0;
+    font-size: 42px;
+  }
+
+  header nav ul {
+    align-items: center;
+  }
+
+  .group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form button {
+    flex: 1;
+  }
+
+  form select,
+  form input {
+    margin-bottom: 0px;
+  }
+}
