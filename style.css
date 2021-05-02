@@ -38,17 +38,18 @@ main img {
 
 .group {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .item {
   flex: 1;
   margin: 10px;
+  flex-direction: column;
 }
 
 .item-double {
   flex: 2;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -135,21 +136,25 @@ footer p {
 
 /* -------  Media Query ------- */
 
-@media all and (min-width: 480 px) {
+@media all and (min-width: 600px) {
   header {
     display: flex;
     justify-content: space-around;
-    padding: 0;
+    text-align: left;
   }
 
   .logo {
     margin: 14 px 0 14 px 20 px;
     padding-top: 0;
     font-size: 42px;
+    justify-content: left;
+    text-align: left;
   }
 
   header nav ul {
     align-items: center;
+    justify-content: right;
+    text-align: right;
   }
 
   .group {
@@ -174,5 +179,10 @@ footer p {
   form select,
   form input {
     margin-bottom: 0px;
+  }
+
+  main img {
+    max-width: 100px;
+    max-height: 100px;
   }
 }
